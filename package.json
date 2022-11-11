@@ -6,11 +6,23 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && node generate_manifest.js && rsconnect deploy manifest public/manifest.json --title food_prices -n"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.1.0",
+    "@types/lodash": "^4.14.191",
+    "@types/svelte-leafletjs": "^0.8.2",
+    "lodash": "^4.17.21",
     "svelte": "^3.52.0",
+    "svelte-typeahead": "^4.4.1",
     "vite": "^3.2.3"
+  },
+  "dependencies": {
+    "@hurtigruten/svelte-table": "^2.0.5",
+    "@rollup/plugin-replace": "^5.0.2",
+    "leaflet": "^1.9.3",
+    "svelte-icons": "^2.1.0",
+    "svelte-leafletjs": "^0.10.0"
   }
 }

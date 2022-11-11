@@ -1,12 +1,17 @@
 <script>
-  import svelteLogo from "./assets/svelte.svg";
-  import Counter from "./lib/Counter.svelte";
-  import Map from "./lib/Map.svelte";
+  import Map from "./lib/Map/Map.svelte";
 </script>
 
-<main>
+<div class={`map`}>
   <Map />
-</main>
+</div>
 
 <style>
+  .map {
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    overflow: hidden;
+    transition: transform 200ms linear;
+  }
 </style>
